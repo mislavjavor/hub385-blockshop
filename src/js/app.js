@@ -37,17 +37,28 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('Adoption.json', function(data) {
-      // Get the necessary contract artifact file and instantiate it with truffle-contract
-      var AdoptionArtifact = data;
-      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
     
-      // Set the provider for our contract
-      App.contracts.Adoption.setProvider(App.web3Provider);
     
-      // Use our contract to retrieve and mark the adopted pets
-      return App.markAdopted();
+
+    $.getJSON('HUBCoin.json', function(data) {
+      
+      var HUBCoinArtefact = data;
+      App.contracts.HUBCoin = TruffleContract(HUBCoinArtefact);
+
+      App.contracts.HUBCoin.setProvider(App.web3Provider);
     });
+
+    $.getJSON('HUBShop', function(data) {
+
+      var HUBShopArtefact = data;
+      App.contracts.HUBShop = TruffleContract(HUBShopArtefact);
+      App.contracts.HUBShop.setProvider(App.web3Provider);
+
+      var balance = web3.eth.getBalance(App.contracts.HUBShop);
+
+      $("#contract-funds").text("Contract funds" + balance);
+
+    })
 
     return App.bindEvents();
   },
@@ -66,7 +77,7 @@ App = {
     }).then(function(adopters) {
       for (i = 0; i < adopters.length; i++) {
         if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-          $('.panel-item').eq(i).find('button').text('Success').attr('disabled', true);
+          $('.panel-item').eq(i).find('button').text('Purchased').attr('disabled', true);
         }
       }
     }).catch(function(err) {
