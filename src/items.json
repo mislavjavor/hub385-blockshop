@@ -1,0 +1,35 @@
+[
+  {
+    "id": 0,
+    "category": "Drinks",
+    "picture": "http://localhost:8080/ipfs/QmPBTrREXVaR7HZi2BxEbKeNmsMMNzv29Vad9k15tgL2vu",
+    "price": 500,
+    "name": "Bushmills Single-Malt",
+    "about": "Single malted"
+  },
+  {
+    "id": 0,
+    "category": "Drinks",
+    "picture": "http://localhost:8080/ipfs/QmPBTrREXVaR7HZi2BxEbKeNmsMMNzv29Vad9k15tgL2vu",
+    "price": 500,
+    "name": "Whiskey Single-Malt",
+    "about": "Single malted"
+  },
+  {
+    "id": 0,
+    "category": "Drinks",
+    "picture": "http://localhost:8080/ipfs/QmPBTrREXVaR7HZi2BxEbKeNmsMMNzv29Vad9k15tgL2vu",
+    "price": 500,
+    "name": "Whiskey Single-Malt",
+    "about": "Single malted"
+  },
+  {
+    "id": 0,
+    "category": "Drinks",
+    "picture": "http://localhost:8080/ipfs/QmPBTrREXVaR7HZi2BxEbKeNmsMMNzv29Vad9k15tgL2vu",
+    "price": 500,
+    "name": "Whiskey Single-Malt",
+    "about": "Single malted"
+  }
+]
+  
