@@ -3,7 +3,7 @@ App = {
   contracts: {},
 
   init: function() {
-    // Load pets.
+
     $.getJSON('../items.json', function(data) {
       var itemsRow = $('#itemsRow');
       var shopTemplate = $('#shopTemplate');
@@ -114,8 +114,23 @@ App = {
 
 };
 
+function createEthInformation() {
+  var currentBlock = web3.eth.blockNumber;
+  $("#current-block").text("Current block: " + currentBlock);
+  $("#accounts").text("Current account" + web3.eth.accounts[0]);
+  $("#current-gas").text("Current gas price: " + web3.eth.gasPrice)
+}
+
+
 $(function() {
   $(window).load(function() {
     App.init();
+    createEthInformation();
   });
 });
+
+function handleNewAccount() {
+  alert(web3.personal.newAccount("abcd"));
+}
+
+

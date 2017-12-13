@@ -9,11 +9,11 @@
   },
   {
     "id": 0,
-    "category": "Drinks",
-    "picture": "http://localhost:8080/ipfs/QmPBTrREXVaR7HZi2BxEbKeNmsMMNzv29Vad9k15tgL2vu",
+    "category": "Animals",
+    "picture": "http://localhost:8080/ipfs/QmUtG6eRVi5eMSdoQDM3pAbVzpq85v57etTyZKtSReoSLS",
     "price": 500,
-    "name": "Whiskey Single-Malt",
-    "about": "Single malted"
+    "name": "Cow White-Black",
+    "about": "Ready to be food"
   },
   {
     "id": 0,

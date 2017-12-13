@@ -3,7 +3,7 @@ pragma solidity ^0.4.11;
 contract HUBShop {
     
     // Product owner - can add and delete products
-    // address _owner;
+    address _owner;
     
     // Product description
     struct Product {
@@ -16,7 +16,7 @@ contract HUBShop {
     uint256 _numberOfProducts = 0;
     
     function HUBShop() {
-        //_owner = owner;
+        _owner = msg.sender;
     }
     
     

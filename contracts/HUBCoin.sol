@@ -8,9 +8,10 @@ contract HUBCoin {
     uint256 _totalIssuedTokens = 0;
     uint256 _endIssuanceTime = now + 1 days;
     
-    
+    address _owner;
+
     function HUBCoin() {
-        
+        _owner = msg.sender;
     }
     
     function getBalance(string account) constant returns (uint256) {
